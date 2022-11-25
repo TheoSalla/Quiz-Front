@@ -1,0 +1,69 @@
+body {
+    background-color: aliceblue;
+    /* background-image: url('https://images.pexels.com/photos/14086435/pexels-photo-14086435.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); */
+    background-image: url('https://wallpaperaccess.com/full/3252122.jpg');
+    background-image: url('https://wallpaperaccess.com/full/1079101.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%; 
+}
+
+h1 {
+    color: #284a2c;
+    font-family:fantasy;
+    cursor:default
+}
+
+h3 {
+    background-color: wheat;
+    border-radius: 130px;
+    cursor: pointer;
+    width:300px;
+    text-align: center;
+    border:5px solid #73AD21;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    
+
+}
+
+.answers :hover {
+    font-size:larger;
+    opacity: 0.4;
+
+}
+
+h2 {
+    color: #284a2c;
+    font-family:fantasy;
+    cursor: default;
+}
+
+.categoryGroup{
+    margin-top: 50px;
+    text-align: center;
+    padding: 40px;
+    background-color: black;
+    opacity: 0.8;
+    background-size: cover;
+    height: 490px;
+    border-radius: 600px;
+    border-color: #0b540b;
+    border-color: #8f550a;
+    border-style:groove;
+    border-width: 50px;
+} 
+
+.btnGroup {
+    margin: 50px;
+    opacity: 0.9;
+}
+.btn1 {
+    margin: 4px;
+    display: inline;
+}
+.question {
+    margin-top: 50px;   
+}
