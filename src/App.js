@@ -26,7 +26,8 @@ function App() {
     <>
        <h2><FaBeer /><SiCloud66></SiCloud66></h2>
       {/* {getQuestions?<Questions back={goToPath} category={getCategory}></Questions>:<Category getCategory={fetchCategory}></Category>} */}
-      <Result></Result>
+      <Questions category="computer"></Questions>
+
 
     </>
   )

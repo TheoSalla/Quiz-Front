@@ -1,12 +1,41 @@
-.score{
-    margin-left: 18%;
+.showResult {
+    color: #284a2c;
+    font-family:fantasy;
+    cursor: default;
     text-align: left;
-    padding-right: 50px;
-    padding: 0px;
-
+    margin-left: 25%;
+    padding-bottom: 50px;
+    font-size: large;
+    margin-top: -50px;
 }
 
-.tableHeader {
-    padding-right: 15px;
-    /* margin-right: 150px; */
-}
+table.test td {
+    background-color: gray;
+    margin: 12px 12px 12px 12px;
+    padding: 12px 12px 12px 12px;
+    border-radius: 7px;
+  }
+  table.test {
+    border-collapse: separate;
+    border-spacing: 10px;
+    *border-collapse: expression('separate', cellSpacing='10px');
+  }
+
+
+  .categoryGroup {
+    margin-top: 120px;
+    text-align: center;
+    padding: 40px;
+    background-color: black;
+    opacity: 0.8;
+    background-size: cover;
+    height: 700px;
+    border-radius: 600px;
+    border-color: #0b540b;
+    border-color: #8f550a;
+    border-style:groove;
+    border-width: 30px;
+} 
+
+
+

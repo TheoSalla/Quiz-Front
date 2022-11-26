@@ -16,7 +16,6 @@ const Questions = (props) => {
   const [finish, setFinish] = useState(false);
   const [loading, SetLoading] = useState(false);
 
-
   const newQuestion = (e) => {
     if (questions[currentQuestion].correctAnswer === e.value) {
       SetPoints(points + 1);
@@ -61,7 +60,6 @@ const Questions = (props) => {
       effectRan.current = true;
     }
   }, [randomQuestions])
-
   // Fetch Questions
   const fetchQuestions = async () => {
     const res = await fetch(`https://localhost:7112/api/question?difficulty=medium&category=${props.category}&count=5`)
@@ -73,9 +71,9 @@ const Questions = (props) => {
       <Container className='categoryGroup questionGroup' maxWidth="lg">
         <div className='question' >
           <div hidden={loading} ><CircularProgress color='success' /></div>
-          {state && <h2 className='currentQuestion'>{questions[currentQuestion].question}</h2>}
-          {state && <div className='answers'>{random.map(value => ({ value, sort: Math.random() })).sort((a, b) => a.sort - b.sort).map(({ value }) => <h3 className='answersChoose' key={value} value={value} onClick={() => newQuestion({ value })}>{value} </h3>)}</div>}<BiCheck hidden={false} ></BiCheck>
-          {finish && <h2> <Result points={points} questionsCount={questions.length}></Result></h2>}
+          {false && <h2 className='currentQuestion'>{questions[currentQuestion].question}</h2>}
+          {false && <div className='answers'>{random.map(value => ({ value, sort: Math.random() })).sort((a, b) => a.sort - b.sort).map(({ value }) => <h3 className='answersChoose' key={value} value={value} onClick={() => newQuestion({ value })}>{value} </h3>)}</div>}<BiCheck hidden={false} ></BiCheck>
+          {true && <Result points={points} questionsCount={questions.length}></Result>}
           <div className='btn' >
             <Button color='success' onClick={props.back}>Back</Button>
           </div>
