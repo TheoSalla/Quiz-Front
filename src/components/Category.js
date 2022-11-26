@@ -5,7 +5,7 @@ import { Button, Paper, Container, Box } from '@mui/material';
 const Category = (props) => {
     return (
         <div>
-            <Container className='categoryGroup' maxWidth="md">
+            <Container className='categoryGroup' maxWidth="lg">
                 <h1>Choose a category</h1>
                 <div className='category'>
                     <div onClick={props.getCategory} id='computer'>Computer</div>
