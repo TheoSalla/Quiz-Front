@@ -15,25 +15,45 @@ h1 {
 }
 
 h3 {
+
+    
+
+}
+.answers {
+    margin-top: 2.3%;
+
+}
+.answers :hover {
+    font-size:larger;
+    opacity: 0.4;
+
+}
+
+.answersChoose {
     background-color: wheat;
     border-radius: 130px;
     cursor: pointer;
-    width:300px;
+    width:400px;
     text-align: center;
     border:5px solid #73AD21;
     display: block;
     margin-left: auto;
     margin-right: auto;
     margin-top: 10px;
-    
-
 }
 
-.answers :hover {
-    font-size:larger;
-    opacity: 0.4;
 
+.currentQuestion {
+    padding-left: 50px;
+    padding-right: 50px;
 }
+
+
+.btn {
+    margin-top: -20px;
+}
+
+
 
 h2 {
     color: #284a2c;
@@ -41,8 +61,8 @@ h2 {
     cursor: default;
 }
 
-.categoryGroup{
-    margin-top: 50px;
+.categoryGroup {
+    margin-top: 120px;
     text-align: center;
     padding: 40px;
     background-color: black;
@@ -56,6 +76,15 @@ h2 {
     border-width: 50px;
 } 
 
+.questionGroup {
+    padding: 4px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+
+
+
 .btnGroup {
     margin: 50px;
     opacity: 0.9;
@@ -67,3 +96,5 @@ h2 {
 .question {
     margin-top: 50px;   
 }
+
+

@@ -15,7 +15,6 @@
     font-family:fantasy;
     opacity: 0.7;
     
-    
 }
 
 .category :hover{
@@ -23,7 +22,6 @@
     opacity: 0.5;
     background-color: palevioletred;
     font-size:larger
-
 }
 
 #computer {
