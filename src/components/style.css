@@ -14,11 +14,6 @@ h1 {
     cursor:default
 }
 
-h3 {
-
-    
-
-}
 .answers {
     margin-top: 2.3%;
 
@@ -73,7 +68,7 @@ h2 {
     border-color: #0b540b;
     border-color: #8f550a;
     border-style:groove;
-    border-width: 50px;
+    border-width: 30px;
 } 
 
 .questionGroup {

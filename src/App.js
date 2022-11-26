@@ -5,6 +5,7 @@ import Category from "./components/Category";
 import { FaBeer } from 'react-icons/fa';
 import { FcBadDecision } from "react-icons/fc";
 import { SiCloud66 } from "react-icons/si";
+import Result from "./components/Result";
 
 function App() {
   const [hidden, setHidden] = useState(true)
@@ -24,7 +25,8 @@ function App() {
   return (
     <>
        <h2><FaBeer /><SiCloud66></SiCloud66></h2>
-      {getQuestions?<Questions back={goToPath} category={getCategory}></Questions>:<Category getCategory={fetchCategory}></Category>}
+      {/* {getQuestions?<Questions back={goToPath} category={getCategory}></Questions>:<Category getCategory={fetchCategory}></Category>} */}
+      <Result></Result>
 
     </>
   )

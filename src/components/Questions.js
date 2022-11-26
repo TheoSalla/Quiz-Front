@@ -75,7 +75,6 @@ const Questions = (props) => {
           <div hidden={loading} ><CircularProgress color='success' /></div>
           {state && <h2 className='currentQuestion'>{questions[currentQuestion].question}</h2>}
           {state && <div className='answers'>{random.map(value => ({ value, sort: Math.random() })).sort((a, b) => a.sort - b.sort).map(({ value }) => <h3 className='answersChoose' key={value} value={value} onClick={() => newQuestion({ value })}>{value} </h3>)}</div>}<BiCheck hidden={false} ></BiCheck>
-         
           {finish && <h2> <Result points={points} questionsCount={questions.length}></Result></h2>}
           <div className='btn' >
             <Button color='success' onClick={props.back}>Back</Button>
@@ -86,4 +85,3 @@ const Questions = (props) => {
   )
 }
 export default Questions
-
