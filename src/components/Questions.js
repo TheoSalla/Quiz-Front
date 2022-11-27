@@ -62,7 +62,7 @@ const Questions = (props) => {
     }
   }, [randomQuestions])
 
-  // Fetch Questions
+  // Fetch Questions!
   const fetchQuestions = async () => {
     const res = await fetch(`https://localhost:7112/api/question?difficulty=medium&category=${props.category}&count=5`)
     const data = await res.json()
