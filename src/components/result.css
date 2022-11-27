@@ -1,0 +1,49 @@
+.showResult {
+    color: #284a2c;
+    font-family:fantasy;
+    cursor: default;
+    text-align: left;
+    margin-left: 5%;
+    font-size: large;
+    margin-top: -30px;
+}
+
+.scoreDisplay {
+  padding-left: 42%;
+}
+
+table.test td {
+    background-color: gray;
+    margin: 4px 4px 4px 4px;
+    padding: 5px 5px 7px 12px;
+    border-radius: 7px;
+    font-size:medium
+  }
+  table.test {
+    border-collapse: separate;
+    border-spacing: 8px;
+    border-collapse: expression('separate', cellSpacing='10px');
+  }
+
+  .resultGroup {
+    margin-top: -30px;
+    text-align: center;
+    padding: 40px;
+    background-color: black;
+    opacity: 0.8;
+    background-size: cover;
+    height: 10%;
+    border-radius: 200px;
+    border-color: #0b540b;
+    border-color: #8f550a;
+    border-style:groove;
+    width: 900px;
+    border-width: 20px;
+} 
+
+/* .questionGroup {
+    padding: 4px;
+    padding-left: 50px;
+    padding-right: 50px;
+} */
+

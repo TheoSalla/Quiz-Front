@@ -1,7 +1,5 @@
 body {
     background-color: aliceblue;
-    /* background-image: url('https://images.pexels.com/photos/14086435/pexels-photo-14086435.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); */
-    background-image: url('https://wallpaperaccess.com/full/3252122.jpg');
     background-image: url('https://wallpaperaccess.com/full/1079101.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -14,11 +12,6 @@ h1 {
     cursor:default
 }
 
-h3 {
-
-    
-
-}
 .answers {
     margin-top: 2.3%;
 
@@ -30,16 +23,18 @@ h3 {
 }
 
 .answersChoose {
-    background-color: wheat;
+    background-color:gray;
+    color: #0b540b;
     border-radius: 130px;
     cursor: pointer;
     width:400px;
     text-align: center;
-    border:5px solid #73AD21;
+    border:2px solid #73AD21;
     display: block;
     margin-left: auto;
     margin-right: auto;
     margin-top: 10px;
+    font-family:fantasy;
 }
 
 
@@ -47,13 +42,6 @@ h3 {
     padding-left: 50px;
     padding-right: 50px;
 }
-
-
-.btn {
-    margin-top: -20px;
-}
-
-
 
 h2 {
     color: #284a2c;
@@ -68,12 +56,12 @@ h2 {
     background-color: black;
     opacity: 0.8;
     background-size: cover;
-    height: 490px;
+    height: 60%;
     border-radius: 600px;
     border-color: #0b540b;
     border-color: #8f550a;
     border-style:groove;
-    border-width: 50px;
+    border-width: 30px;
 } 
 
 .questionGroup {
@@ -81,9 +69,6 @@ h2 {
     padding-left: 50px;
     padding-right: 50px;
 }
-
-
-
 
 .btnGroup {
     margin: 50px;
