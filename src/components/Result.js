@@ -2,8 +2,9 @@ import { Container } from '@mui/system'
 import React from 'react'
 import './result.css'
 const Result = (props) => {
+    props.result('resultGroup questionGroup');
     return (
-        <div className='showResult'>
+        <div className='showResult' >
             {/* <h2>You got {props.points} of {props.questionsCount}!</h2> */}
             <table className='test'>
                 <tr >
@@ -11,57 +12,9 @@ const Result = (props) => {
                     <th>Right answer</th>
                     <th>You anwser</th>
                 </tr>
-                <tr>
-                    <td>Alfreds Futterkiste</td>
-                    <td>Maria Anders</td>
-                    <td>Germany</td>
-                </tr>
-                <tr>
-                    <td>Centro comercial Moctezuma</td>
-                    <td>Francisco Chang</td>
-                    <td>Mexico</td>
-                </tr>
-                <tr>
-                    <td>Alfreds Futterkiste</td>
-                    <td>Maria Anders</td>
-                    <td>Germany</td>
-                </tr>
-                <tr>
-                    <td>Centro comercial Moctezuma</td>
-                    <td>Francisco Chang</td>
-                    <td>Mexico</td>
-                </tr>
-                <tr>
-                    <td>Alfreds Futterkiste</td>
-                    <td>Maria Anders</td>
-                    <td>Germany</td>
-                </tr>
-                <tr>
-                    <td>Centro comercial Moctezuma</td>
-                    <td>Francisco Chang</td>
-                    <td>Mexico</td>
-                </tr>
-                <tr>
-                    <td>Alfreds Futterkiste</td>
-                    <td>Maria Anders</td>
-                    <td>Germany</td>
-                </tr>
-                <tr>
-                    <td>Centro comercial Moctezuma</td>
-                    <td>Francisco Chang</td>
-                    <td>Mexico</td>
-                </tr>
-                <tr>
-                    <td>Alfreds Futterkiste</td>
-                    <td>Maria Anders</td>
-                    <td>Germany</td>
-                </tr>
-                <tr>
-                    <td>Centro comercial Moctezuma</td>
-                    <td>Francisco Chang</td>
-                    <td>Mexico</td>
-                </tr>
+                {props.questions.map((q, i) => <tr> <td>{q.question}</td> <td>{q.correctAnswer}</td><td>{props.userAnswers[i]}</td></tr>)}
             </table>
+            <h2>You got {props.points} of {props.questions.length}!</h2>
         </div>
     )
 }

@@ -25,16 +25,18 @@ h1 {
 }
 
 .answersChoose {
-    background-color: wheat;
+    background-color:gray;
+    color: #0b540b;
     border-radius: 130px;
     cursor: pointer;
     width:400px;
     text-align: center;
-    border:5px solid #73AD21;
+    border:2px solid #73AD21;
     display: block;
     margin-left: auto;
     margin-right: auto;
     margin-top: 10px;
+    font-family:fantasy;
 }
 
 
@@ -42,13 +44,6 @@ h1 {
     padding-left: 50px;
     padding-right: 50px;
 }
-
-
-.btn {
-    margin-top: -20px;
-}
-
-
 
 h2 {
     color: #284a2c;
@@ -63,7 +58,7 @@ h2 {
     background-color: black;
     opacity: 0.8;
     background-size: cover;
-    height: 900px;
+    height: 400px;
     border-radius: 600px;
     border-color: #0b540b;
     border-color: #8f550a;
@@ -76,9 +71,6 @@ h2 {
     padding-left: 50px;
     padding-right: 50px;
 }
-
-
-
 
 .btnGroup {
     margin: 50px;

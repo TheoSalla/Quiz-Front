@@ -1,0 +1,22 @@
+.blop {
+    color: white;
+    background-color: #0b540b;
+    width: 90px;
+    height: 60px;
+    line-height: 90px;
+    border-radius: 30px;
+    cursor: pointer;
+    display: inline-block;
+    border: 3px solid black;
+    padding: 5px;
+    overflow: hidden;
+    font-family: fantasy;
+
+
+}
+
+.blop :hover {
+    opacity: 0.2;
+    background-color: black;
+    font-size: larger
+}

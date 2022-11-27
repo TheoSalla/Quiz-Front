@@ -1,4 +1,5 @@
 import React from 'react'
+import './questions.css'
 import { useState, useEffect, useRef } from 'react'
 import { Button, Container, CircularProgress } from '@mui/material';
 import { BiCheck } from "react-icons/bi";
@@ -6,17 +7,25 @@ import Result from './Result';
 
 const Questions = (props) => {
   const effectRan = useRef(false);
-
   const [questions, setQuestions] = useState([])
-  const [question, setQuestion] = useState("")
   const [state, setState] = useState(false);
   const [currentQuestion, SetCurrentQuestion] = useState(0);
   const [random, SetRandom] = useState([]);
   const [points, SetPoints] = useState(0);
   const [finish, setFinish] = useState(false);
   const [loading, SetLoading] = useState(false);
+  const [categoryStyle, setCategoryStyle] = useState('categoryGroup questionGroup');
+  const [userAnswers, setUserAnswers] = useState([]);
+
+  const showResult = (child) => {
+    console.log(child);
+    setCategoryStyle(child);
+  }
 
   const newQuestion = (e) => {
+
+    setUserAnswers(() => [...userAnswers, e.value]);
+
     if (questions[currentQuestion].correctAnswer === e.value) {
       SetPoints(points + 1);
       console.log("Right answer!");
@@ -62,20 +71,20 @@ const Questions = (props) => {
   }, [randomQuestions])
   // Fetch Questions
   const fetchQuestions = async () => {
-    const res = await fetch(`https://localhost:7112/api/question?difficulty=medium&category=${props.category}&count=5`)
+    const res = await fetch(`https://localhost:7112/api/question?difficulty=medium&category=${props.category}&count=1`)
     const data = await res.json()
     return data;
   }
   return (
     <div hidden={props.hidden}>
-      <Container className='categoryGroup questionGroup' maxWidth="lg">
+      <Container className={categoryStyle} maxWidth="lg">
         <div className='question' >
           <div hidden={loading} ><CircularProgress color='success' /></div>
-          {false && <h2 className='currentQuestion'>{questions[currentQuestion].question}</h2>}
-          {false && <div className='answers'>{random.map(value => ({ value, sort: Math.random() })).sort((a, b) => a.sort - b.sort).map(({ value }) => <h3 className='answersChoose' key={value} value={value} onClick={() => newQuestion({ value })}>{value} </h3>)}</div>}<BiCheck hidden={false} ></BiCheck>
-          {true && <Result points={points} questionsCount={questions.length}></Result>}
-          <div className='btn' >
-            <Button color='success' onClick={props.back}>Back</Button>
+          {state && <h2 className='currentQuestion'>{questions[currentQuestion].question}</h2>}
+          {state && <div className='answers'>{random.map(value => ({ value, sort: Math.random() })).sort((a, b) => a.sort - b.sort).map(({ value }) => <h3 className='answersChoose' key={value} value={value} onClick={() => newQuestion({ value })}>{value} </h3>)}</div>}<BiCheck hidden={false} ></BiCheck>
+          {finish && <Result userAnswers={userAnswers} questions={questions} result={showResult} points={points}></Result>}
+          <div className='blop' >
+            <div onClick={props.back}>Back</div>
           </div>
         </div>
       </Container>
@@ -83,3 +92,8 @@ const Questions = (props) => {
   )
 }
 export default Questions
+
+
+// style={{height: "700px"}}
+
+// categoryGroup questionGroup
