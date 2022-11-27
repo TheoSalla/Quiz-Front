@@ -2,7 +2,7 @@
     color: white;
     background-color: #0b540b;
     width: 90px;
-    height: 60px;
+    height: 40px;
     line-height: 90px;
     border-radius: 30px;
     cursor: pointer;
@@ -20,3 +20,11 @@
     background-color: black;
     font-size: larger
 }
+
+.backBtn {
+    width: 90px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 30px;
+}
+

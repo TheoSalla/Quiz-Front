@@ -71,7 +71,7 @@ const Questions = (props) => {
   }, [randomQuestions])
   // Fetch Questions
   const fetchQuestions = async () => {
-    const res = await fetch(`https://localhost:7112/api/question?difficulty=medium&category=${props.category}&count=1`)
+    const res = await fetch(`https://localhost:7112/api/question?difficulty=medium&category=${props.category}&count=10`)
     const data = await res.json()
     return data;
   }
@@ -84,7 +84,7 @@ const Questions = (props) => {
           {state && <div className='answers'>{random.map(value => ({ value, sort: Math.random() })).sort((a, b) => a.sort - b.sort).map(({ value }) => <h3 className='answersChoose' key={value} value={value} onClick={() => newQuestion({ value })}>{value} </h3>)}</div>}<BiCheck hidden={false} ></BiCheck>
           {finish && <Result userAnswers={userAnswers} questions={questions} result={showResult} points={points}></Result>}
           <div className='blop' >
-            <div onClick={props.back}>Back</div>
+            <div  className='backBtn' onClick={props.back}>Back</div>
           </div>
         </div>
       </Container>

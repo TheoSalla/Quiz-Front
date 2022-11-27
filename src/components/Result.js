@@ -14,7 +14,7 @@ const Result = (props) => {
                 </tr>
                 {props.questions.map((q, i) => <tr> <td>{q.question}</td> <td>{q.correctAnswer}</td><td>{props.userAnswers[i]}</td></tr>)}
             </table>
-            <h2>You got {props.points} of {props.questions.length}!</h2>
+            <p className='scoreDisplay'>You got {props.points} of {props.questions.length}!</p>
         </div>
     )
 }

@@ -1,7 +1,5 @@
 body {
     background-color: aliceblue;
-    /* background-image: url('https://images.pexels.com/photos/14086435/pexels-photo-14086435.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); */
-    background-image: url('https://wallpaperaccess.com/full/3252122.jpg');
     background-image: url('https://wallpaperaccess.com/full/1079101.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -58,7 +56,7 @@ h2 {
     background-color: black;
     opacity: 0.8;
     background-size: cover;
-    height: 400px;
+    height: 60%;
     border-radius: 600px;
     border-color: #0b540b;
     border-color: #8f550a;
