@@ -71,7 +71,9 @@ const Questions = (props) => {
   }, [randomQuestions])
   // Fetch Questions
   const fetchQuestions = async () => {
-    const res = await fetch(`https://localhost:7112/api/question?difficulty=medium&category=${props.category}&count=10`)
+    const res = await fetch(`http://localhost:5249/api/question?difficulty=medium&category=${props.category}&count=10`, { credentials: 'include', headers: {
+      'Access-Control-Allow-Credentials': true
+    }})
     const data = await res.json()
     return data;
   }
