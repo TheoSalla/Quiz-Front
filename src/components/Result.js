@@ -10,7 +10,7 @@ const Result = (props) => {
                 <tr >
                     <th>Question</th>
                     <th>Right answer</th>
-                    <th>You anwser</th>
+                    <th>You answer</th>
                 </tr>
                 {props.questions.map((q, i) => <tr> <td>{q.question}</td> <td>{q.correctAnswer}</td><td>{props.userAnswers[i]}</td></tr>)}
             </table>
